@@ -398,3 +398,14 @@ details p{margin:0 0 18px}
   .btn,.card{transition:none}
   .btn:hover,.card:hover{transform:none}
 }
+
+
+/* Coming-soon placeholder (Ko-fi URL not yet created) */
+.btn-soon{
+  color:#fff;
+  background:#5c5668;
+  box-shadow:none;
+  cursor:default;
+}
+.btn-soon:hover{transform:none;filter:none;color:#fff}
+.btn-soon:focus-visible{outline-color:#5c5668}
