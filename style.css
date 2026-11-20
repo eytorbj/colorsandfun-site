@@ -247,9 +247,16 @@ nav a:hover{background:rgba(255,255,255,.8);color:var(--blue)}
 .t-red{background:#f8e6e6;color:#8a1f1f}
 .t-blue{background:#e4edfb;color:#163a8a}
 .t-green{background:#e3f3ea;color:#146338}
-.buy{margin-top:auto;display:grid;grid-template-columns:1fr auto;gap:8px 12px;align-items:center}
-.price{font-family:var(--font-serif);font-size:1.65rem;font-weight:600;color:var(--ink);grid-column:1;grid-row:1}
-.buy .btn{grid-column:2;justify-self:end}
+.buy{margin-top:auto;display:flex;flex-wrap:wrap;align-items:center;gap:10px 12px}
+.price{font-family:var(--font-serif);font-size:1.65rem;font-weight:600;color:var(--ink);margin-right:auto}
+.buy-actions{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end;align-items:center}
+.btn-amazon{
+  color:#fff8ee;
+  background:linear-gradient(180deg,#e0b84a 0%,#c4962e 45%,#8f6a16 100%);
+  box-shadow:0 8px 18px rgba(143,106,22,.22),inset 0 1px 0 rgba(255,255,255,.38);
+}
+.btn-amazon:hover{color:#fff}
+.is-card .buy-actions{margin-top:2px}
 .price s{font-family:var(--font-sans);font-size:.95rem;color:var(--muted);font-weight:500;margin-left:4px}
 .save{margin:10px 0 0!important;font-weight:600;color:#146338}
 .card-best{box-shadow:0 0 0 1.5px var(--gold),var(--shadow)}
@@ -409,3 +416,8 @@ details p{margin:0 0 18px}
 }
 .btn-soon:hover{transform:none;filter:none;color:#fff}
 .btn-soon:focus-visible{outline-color:#5c5668}
+
+@media (max-width:420px){
+  .buy-actions{width:100%}
+  .buy-actions .btn{flex:1 1 auto}
+}
